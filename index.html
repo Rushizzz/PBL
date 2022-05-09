@@ -1,0 +1,104 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenFarm</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo_content">
+            <div class="logo">
+                <i class='bx bx-leaf'></i>
+                <div class="logo_name">GreenFarm</div>
+            </div>
+            <i class='bx bx-menu' id="menuBtn"></i>
+        </div>
+        <ul class="nav_list">
+            <li>
+                <a href="#">
+                    <i class='bx bx-grid-alt'></i>
+                    <span class="links_name">Dashboard</span>
+                </a>
+                <span class="tooltip">Dashboard</span>
+            </li>
+            <li>
+                <a href="anlytics.html">
+                    <i class='bx bx-bar-chart-alt-2'></i>
+                    <span class="links_name">Analytics</span>
+                </a>
+                <span class="tooltip">Analytics</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-expand-horizontal'></i>
+                    <span class="links_name">Extra</span>
+                </a>
+                <span class="tooltip">Extra</span>
+            </li>
+        </ul>
+        <div class="profile_content">
+            <div class="profile">
+                <div class="profile_details">
+                    <i class='bx bx-user-circle' id="img_profile"></i>
+                    <div class="name_job">
+                        <div class="name">Rushikesh Shinde</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="box" id="temp">
+            <a href="./pages/Temperature.html">
+                <h1>36.9</h1>
+                <h2>Temperature</h2>
+            </a>
+        </div>
+        <div class="box">
+            <a href="./pages/Humidity.html">
+            <h1>26</h1>
+            <h2>Humidity</h2>
+            </a>
+        </div>
+        <div class="box">
+            <a href="./pages/Light.html">
+            <h1>525</h1>
+            <h2>Light</h2>
+            </a>
+        </div>
+        <div class="box">
+            <a href="./pages/ppm.html">
+            <h1>404.4</h1>
+            <h2>Co2</h2>
+            </a>
+        </div>
+        <div class="box">
+            <a href="./pages/soilMoisture.html">
+            <h1>8.11</h1>
+            <h2>Soil Moisture</h2>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        let btn = document.querySelector("#menuBtn");
+        let sidebar = document.querySelector(".sidebar");
+        let tooltip = document.querySelector(".tooltip");
+        
+        btn.onclick = function() {
+            sidebar.classList.toggle("active");
+            tooltip.classList.toggle("toolActive");
+        } 
+        
+    </script>
+</body>
+</html>
