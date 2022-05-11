@@ -37,11 +37,43 @@
                 <span class="tooltip">Analytics</span>
             </li>
             <li>
-                <a href="#">
-                    <i class='bx bx-expand-horizontal'></i>
-                    <span class="links_name">Extra</span>
-                </a>
-                <span class="tooltip">Extra</span>
+                <div class="links_name select-box">
+                    
+                    <div class="options-container">
+
+                        <div class="option" id="tomato">
+                            <input 
+                            type="radio" 
+                            class="radio"  
+                            name="category"/>
+                            <label for="automobiles">Tomato</label>
+                        </div>
+                    
+                        <div class="option" id="potato">
+                            <input 
+                            type="radio" 
+                            class="radio" 
+                            name="category"/>
+                            <label for="automobiles">Potato</label>
+                        </div>
+
+                        <div class="option">
+                            <input 
+                            type="radio" 
+                            class="radio" 
+                            id="Select option" 
+                            name="category"/>
+                            <label for="automobiles">Select option</label>
+                            
+                        </div>
+                        
+                    </div>
+
+                    <div class="selected" id="selected">
+                        Select Crop
+                        <i class='bx bx-chevron-down' style="font-size: 28px;"></i>
+                    </div>
+                </div>
             </li>
         </ul>
         <div class="profile_content">
@@ -63,25 +95,25 @@
                 <h2>Temperature</h2>
             </a>
         </div>
-        <div class="box">
+        <div class="box" id="humi">
             <a href="./pages/Humidity.html">
             <h1>26</h1>
             <h2>Humidity</h2>
             </a>
         </div>
-        <div class="box">
+        <div class="box" id="lig">
             <a href="./pages/Light.html">
             <h1>525</h1>
             <h2>Light</h2>
             </a>
         </div>
-        <div class="box">
+        <div class="box" id="ppm">
             <a href="./pages/ppm.html">
             <h1>404.4</h1>
             <h2>Co2</h2>
             </a>
         </div>
-        <div class="box">
+        <div class="box" id="mois">
             <a href="./pages/soilMoisture.html">
             <h1>8.11</h1>
             <h2>Soil Moisture</h2>
@@ -98,7 +130,12 @@
             sidebar.classList.toggle("active");
             tooltip.classList.toggle("toolActive");
         } 
+
+        function myfunction(){
+            console.log(" im clicked");
+        }
         
     </script>
+    <script src="./index.js" type="module"></script>
 </body>
 </html>
